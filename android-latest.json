@@ -1,0 +1,17 @@
+{
+  "version": "0.3.3-beta.1",
+  "versionCode": 300301,
+  "channel": "beta",
+  "packageId": "com.hanyer.antares",
+  "minSdk": 24,
+  "architectures": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ],
+  "apkUrl": "https://github.com/Hanyer001/antares-actualizaciones/releases/download/android-v0.3.3-beta.1/Antares-Android.apk",
+  "releaseUrl": "https://github.com/Hanyer001/antares-actualizaciones/releases/tag/android-v0.3.3-beta.1",
+  "sha256": "832890c2580177dc04d216ea05678ad1c7e21bcc33b2cfd68fc10f4327d34ce6",
+  "sizeBytes": 35686685,
+  "signingCertificateSha256": "af78311090ac837023110df044113896137232b5948039a84e2645d071d7da72",
+  "notes": "Primera distribución pública Android: interfaz compacta, playlists, música, personalización y ajustes claros."
+}

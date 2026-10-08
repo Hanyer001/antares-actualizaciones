@@ -1,6 +1,6 @@
 # Antares — Distribución y actualizaciones
 
-Repositorio oficial de distribución de **Antares para Windows**. Su finalidad es alojar los instaladores y los archivos que utiliza la aplicación para comprobar y descargar nuevas versiones.
+Repositorio oficial de distribución de **Antares para Windows y Android**. Su finalidad es alojar los instaladores y los archivos que utiliza la aplicación para comprobar y descargar nuevas versiones.
 
 El código fuente de la aplicación se mantiene en el [repositorio Antares](https://github.com/Hanyer001/Antares). Este repositorio corresponde al canal de distribución, cuya disponibilidad pública permite acceder a las descargas sin una cuenta de GitHub.
 
@@ -14,7 +14,14 @@ Cada publicación incluye las notas de la versión y los archivos necesarios par
 
 La versión estable **0.3.3** incorpora listas de Spotify de más de 100 canciones, álbumes completos en orden y una vista de artista compacta: cinco principales con continuación habitual y el botón **Solo este artista** para su catálogo en la cola. El instalador ocupa 25,7 MB (25,656,066 bytes).
 
-El código de Android también se ha actualizado en el repositorio principal, pero continúa como Preview. Este canal distribuye únicamente las actualizaciones estables de Windows.
+### Android 0.3.3 Beta 1
+
+[Descargar Antares para Android](https://github.com/Hanyer001/antares-actualizaciones/releases/download/android-v0.3.3-beta.1/Antares-Android.apk) · [Notas e instalación](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/android-v0.3.3-beta.1). Android 7.0+, ARM de 32 y 64 bits. Paquete público `com.hanyer.antares`, firmado con la clave privada de distribución. Las próximas versiones públicas conservan identificador y firma; se instalan encima sin desinstalar.
+
+Preview puede coexistir. Exporta una copia completa desde Ajustes → Tus datos en Preview y restáurala en Antares para migrar la biblioteca.
+
+La release Android está marcada **Pre-release** y no reemplaza la última estable de Windows. `android-latest.json` es un manifiesto separado, preparado para un futuro aviso dentro de Android; la app todavía no lo consulta. El `latest.json` de Windows no cambia.
+
 
 **[Descargar Antares 0.3.3](https://github.com/Hanyer001/antares-actualizaciones/releases/download/v0.3.3/Antares-Setup.exe)** · [Notas y archivos de esta versión](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/v0.3.3)
 
