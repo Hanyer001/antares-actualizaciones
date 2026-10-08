@@ -10,11 +10,13 @@ El código fuente de la aplicación se mantiene en el [repositorio Antares](http
 
 Cada publicación incluye las notas de la versión y los archivos necesarios para su instalación. Las versiones anteriores permanecen disponibles en el [historial de publicaciones](https://github.com/Hanyer001/antares-actualizaciones/releases).
 
-### Versión 0.3.2
+### Versión 0.3.3
 
-La versión estable **0.3.2** incorpora extracción nativa de audio en Windows con `rusty_ytdl`, corrige los enlaces que devolvían HTTP 403 al continuar una canción y limpia los avisos de compilación. El instalador ocupa 25,6 MB (25.599.036 bytes).
+La versión estable **0.3.3** incorpora listas de Spotify de más de 100 canciones, álbumes completos en orden y una vista de artista compacta: cinco principales con continuación habitual y el botón **Solo este artista** para su catálogo en la cola. El instalador ocupa 25,7 MB (25,656,066 bytes).
 
-**[Descargar Antares 0.3.2](https://github.com/Hanyer001/antares-actualizaciones/releases/download/v0.3.2/Antares-Setup.exe)** · [Notas y archivos de esta versión](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/v0.3.2)
+El código de Android también se ha actualizado en el repositorio principal, pero continúa como Preview. Este canal distribuye únicamente las actualizaciones estables de Windows.
+
+**[Descargar Antares 0.3.3](https://github.com/Hanyer001/antares-actualizaciones/releases/download/v0.3.3/Antares-Setup.exe)** · [Notas y archivos de esta versión](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/v0.3.3)
 
 ### Requisitos
 
