@@ -1,99 +1,60 @@
-# Antares — Distribución y actualizaciones
+# Antares — Downloads and Updates
 
-Repositorio oficial de distribución de **Antares para Windows y Android**. Su finalidad es alojar los instaladores y los archivos que utiliza la aplicación para comprobar y descargar nuevas versiones.
+Official distribution repository for **Antares on Windows and Android**. This repository hosts release packages and update metadata. Application development lives in **[Hanyer001/Antares](https://github.com/Hanyer001/Antares)**.
 
-El código fuente de la aplicación se mantiene en el [repositorio Antares](https://github.com/Hanyer001/Antares). Este repositorio corresponde al canal de distribución, cuya disponibilidad pública permite acceder a las descargas sin una cuenta de GitHub.
+**[Latest stable Windows release](https://github.com/Hanyer001/antares-actualizaciones/releases/latest)** · [Android beta](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/android-v0.3.3-beta.1) · [Product website](https://hanyer001.github.io/Pagina-Antares/)
 
-## Descarga oficial
+## Choose a platform
 
-**[Consultar y descargar la última versión estable](https://github.com/Hanyer001/antares-actualizaciones/releases/latest)**
+| Platform | Published version | Requirements | Download |
+| --- | --- | --- | --- |
+| Windows | 0.3.3 stable | 64-bit Windows 10 or 11 | [Installer](https://github.com/Hanyer001/antares-actualizaciones/releases/download/v0.3.3/Antares-Setup.exe) |
+| Android | 0.3.3 Beta 1 | Android 7.0+, 32-bit or 64-bit ARM | [APK](https://github.com/Hanyer001/antares-actualizaciones/releases/download/android-v0.3.3-beta.1/Antares-Android.apk) |
 
-Cada publicación incluye las notas de la versión y los archivos necesarios para su instalación. Las versiones anteriores permanecen disponibles en el [historial de publicaciones](https://github.com/Hanyer001/antares-actualizaciones/releases).
+Previous versions remain in the [release history](https://github.com/Hanyer001/antares-actualizaciones/releases).
 
-### Versión 0.3.3
+## Windows installation
 
-La versión estable **0.3.3** incorpora listas de Spotify de más de 100 canciones, álbumes completos en orden y una vista de artista compacta: cinco principales con continuación habitual y el botón **Solo este artista** para su catálogo en la cola. El instalador ocupa 25,7 MB (25,656,066 bytes).
+1. Open the latest stable release and download `Antares-Setup.exe` or `Antares_<version>_x64-setup.exe`. Both names refer to the same installer contents for that release.
+2. Run the installer. Installation is per-user and does not require administrator rights.
+3. To update manually, run the new installer over the existing installation. Library data and preferences are stored separately from installation files.
 
-### Android 0.3.3 Beta 1
+Create an additional backup through **Ajustes → Tus datos** before updating if desired.
 
-[Descargar Antares para Android](https://github.com/Hanyer001/antares-actualizaciones/releases/download/android-v0.3.3-beta.1/Antares-Android.apk) · [Notas e instalación](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/android-v0.3.3-beta.1). Android 7.0+, ARM de 32 y 64 bits. Paquete público `com.hanyer.antares`, firmado con la clave privada de distribución. Las próximas versiones públicas conservan identificador y firma; se instalan encima sin desinstalar.
+## Windows in-app updates
 
-Preview puede coexistir. Exporta una copia completa desde Ajustes → Tus datos en Preview y restáurala en Antares para migrar la biblioteca.
+The application updater is available from version 0.3.0. When **Ajustes → Sistema → Avisar de versiones nuevas** is enabled, Antares checks at startup and every six hours while running. A manual check is also available through **Buscar versión nueva**.
 
-La release Android está marcada **Pre-release** y no reemplaza la última estable de Windows. `android-latest.json` es un manifiesto separado, preparado para un futuro aviso dentro de Android; la app todavía no lo consulta. El `latest.json` de Windows no cambia.
+A newer version prompts the user to confirm download and installation. Antares verifies the package signature before installing and restarting. Older installations without the updater need one manual update first.
 
+## Android beta
 
-**[Descargar Antares 0.3.3](https://github.com/Hanyer001/antares-actualizaciones/releases/download/v0.3.3/Antares-Setup.exe)** · [Notas y archivos de esta versión](https://github.com/Hanyer001/antares-actualizaciones/releases/tag/v0.3.3)
+The public Android package uses `com.hanyer.antares`. Future public packages must preserve its application ID and signing identity for installation over an existing copy.
 
-### Requisitos
+Preview can coexist with the public application. Export a complete backup from Preview and restore it in Antares to migrate your library. See [ANDROID.md (Spanish)](ANDROID.md) for installation details.
 
-- Windows 10 o Windows 11 de 64 bits.
-- Conexión a Internet para comprobar y descargar actualizaciones.
+Android is published as a **prerelease** and does not replace Windows as the latest stable release. `android-latest.json` is a separate manifest prepared for future update notifications; the Android app does not yet consult it.
 
-La instalación se realiza para el usuario actual y no requiere permisos de administrador.
+## Release artifacts
 
-## Instalación y actualización manual
-
-1. Acceda a la última versión estable mediante el enlace de descarga oficial.
-2. En la sección **Assets**, descargue `Antares-Setup.exe` o `Antares_<versión>_x64-setup.exe`. Ambos contienen el mismo instalador.
-3. Ejecute el instalador y siga sus instrucciones.
-
-Para actualizar una instalación existente, ejecute el nuevo instalador sobre la versión anterior, sin desinstalarla previamente. La biblioteca, las listas, el historial y las preferencias se almacenan fuera de la carpeta de instalación y se conservan durante la actualización.
-
-Como respaldo adicional, la aplicación permite exportar una copia completa desde **Ajustes → Tus datos**.
-
-## Actualizaciones desde la aplicación
-
-El actualizador integrado está disponible desde **Antares 0.3.0**. Cuando la opción **Ajustes → Sistema → Avisar de versiones nuevas** está activada, la aplicación consulta este canal:
-
-- Al iniciar Antares.
-- Cada seis horas mientras la aplicación permanece abierta.
-
-También es posible realizar una comprobación manual mediante **Buscar versión nueva**.
-
-Si existe una versión superior a la instalada, Antares muestra un aviso. La descarga y la instalación requieren la confirmación del usuario. Antes de instalar el paquete, la aplicación verifica su firma y, al completar la actualización, se reinicia.
-
-Los avisos se muestran al comprobar el canal; no se envían con la aplicación cerrada. Una instalación anterior que no incluya el actualizador debe actualizarse manualmente una vez para recibir las siguientes versiones desde la aplicación.
-
-## Archivos de cada publicación
-
-| Archivo | Finalidad |
+| Artifact | Purpose |
 | --- | --- |
-| `Antares_<versión>_x64-setup.exe` | Instalador de Antares para Windows de 64 bits. Se utiliza tanto para nuevas instalaciones como para actualizaciones manuales. |
-| `Antares-Setup.exe` | Copia idéntica con nombre fijo para el enlace de descarga de la página. |
-| `latest.json` | Manifiesto que consulta el actualizador. Contiene la versión, las notas, la dirección del instalador y su firma de verificación. |
+| `Antares_<version>_x64-setup.exe` | Versioned Windows installer. |
+| `Antares-Setup.exe` | Identical fixed-name copy for download links. |
+| `latest.json` | Windows updater manifest with version, notes, installer URL and verification signature. |
+| `Antares-Android.apk` | Android application package attached to its prerelease. |
+| `android-latest.json` | Separate Android release metadata. |
 
-Para instalar Antares solo es necesario descargar el archivo `.exe`. El manifiesto `latest.json` está destinado al uso de la aplicación y no requiere intervención del usuario.
+Windows users only need the `.exe`; the application consumes `latest.json`. The updater signature verifies a package against the public key embedded in Antares. It is separate from a Windows code-signing certificate.
 
-## Verificación y seguridad
+## Publish a release
 
-Antares comprueba la firma del instalador con la clave pública incorporada en la aplicación. Esta comprobación permite detectar modificaciones del paquete y verificar que fue firmado con la clave correspondiente.
+Follow the [source repository's release guide (Spanish)](https://github.com/Hanyer001/Antares/blob/main/docs/releases.md).
 
-La firma incluida en `latest.json` es pública y puede distribuirse junto con el instalador. **La clave privada de firma, sus contraseñas y las credenciales de GitHub no deben publicarse en este repositorio ni adjuntarse a una versión.**
+For Windows, prepare the installer and its matching signed manifest, attach the versioned installer, fixed-name copy and `latest.json` to `vX.Y.Z`, then publish it as the stable **Latest** release. Confirm that the manifest points to the intended package and advertises a newer version. Keep Android prereleases separate.
 
-Esta verificación corresponde al sistema de actualizaciones de Antares; no equivale a un certificado de firma de código de Windows.
+A commit to the application source does not distribute an update. Users receive new packages only after the release artifacts are published. Private signing keys, passwords and GitHub credentials must remain outside this repository and release assets.
 
-## Publicación de nuevas versiones
+## Support
 
-La persona responsable de una publicación debe:
-
-1. Actualizar el número de versión de la aplicación y comprobar los cambios.
-2. Generar el instalador y su manifiesto utilizando la clave de firma correspondiente al canal existente.
-3. Crear una publicación con la etiqueta `vX.Y.Z` y describir los cambios de la versión.
-4. Adjuntar `Antares_<versión>_x64-setup.exe`, su copia `Antares-Setup.exe` y el archivo `latest.json` generado para ese mismo paquete.
-5. Publicar la versión como estable y marcarla como **Latest**.
-6. Comprobar que el manifiesto y el instalador pueden descargarse desde sus direcciones públicas.
-
-El manifiesto debe indicar una versión superior a la instalada y apuntar al instalador correcto. Las publicaciones en borrador o marcadas como **Pre-release** no deben utilizarse para distribuir actualizaciones del canal estable.
-
-Subir cambios al repositorio del código fuente no distribuye una actualización. Para que los usuarios puedan recibirla, es necesario publicar el instalador firmado y su manifiesto en este canal.
-
-Consulte la [guía de publicación](https://github.com/Hanyer001/Antares/blob/main/docs/releases.md) para conocer el procedimiento de preparación de los archivos.
-
-## Documentación y soporte
-
-- [Sitio web de Antares](https://hanyer001.github.io/Pagina-Antares/)
-- [Código fuente y documentación](https://github.com/Hanyer001/Antares)
-- [Reportar un problema](https://github.com/Hanyer001/Antares/issues)
-
-Al informar un problema de instalación o actualización, indique la versión de Antares, la versión de Windows y el mensaje de error, si existe. Omita contraseñas, tokens y cualquier otra información privada.
+Report installation and update problems in [Antares Issues](https://github.com/Hanyer001/Antares/issues). Include the application version, operating system and error message, without credentials or private data.
