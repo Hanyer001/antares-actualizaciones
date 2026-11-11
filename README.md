@@ -13,6 +13,14 @@ Official distribution repository for **Antares on Windows and Android**. This re
 
 Previous versions remain in the [release history](https://github.com/Hanyer001/antares-actualizaciones/releases).
 
+## Source development and platform progress
+
+The [application repository](https://github.com/Hanyer001/Antares) now includes a shared Rust/Wasm core, Leptos interface components, Rust search and audio extraction, desktop diagnostics and additional macOS work. Source changes are delivered through new release packages.
+
+macOS Apple Silicon has source builds and local QA. Public distribution signing and native Windows verification of the newer source revision are tracked in the [validation record](https://github.com/Hanyer001/Antares/blob/main/docs/obsidian/Ruta%20de%20mejoras%20para%20macOS%20y%20Windows.md). Web/iPhone support is experimental and documented in the [web/iOS guide](https://github.com/Hanyer001/Antares/blob/main/docs/WEB.md).
+
+The table above describes the packages currently published in this repository.
+
 ## Windows installation
 
 1. Open the latest stable release and download `Antares-Setup.exe` or `Antares_<version>_x64-setup.exe`. Both names refer to the same installer contents for that release.
@@ -41,7 +49,9 @@ Android is published as a **prerelease** and does not replace Windows as the lat
 | --- | --- |
 | `Antares_<version>_x64-setup.exe` | Versioned Windows installer. |
 | `Antares-Setup.exe` | Identical fixed-name copy for download links. |
-| `latest.json` | Windows updater manifest with version, notes, installer URL and verification signature. |
+| `latest.json` | Updater manifest with version, notes and signed packages for the published desktop architectures. The current stable release advertises Windows. |
+| `Antares.app.tar.gz` | Planned macOS updater artifact, included when a signed Mac delivery is published. |
+| `SHA256SUMS` / `revision.json` | Hashes and source revision records prepared by the current delivery tools. |
 | `Antares-Android.apk` | Android application package attached to its prerelease. |
 | `android-latest.json` | Separate Android release metadata. |
 
@@ -52,6 +62,8 @@ Windows users only need the `.exe`; the application consumes `latest.json`. The 
 Follow the [source repository's release guide (Spanish)](https://github.com/Hanyer001/Antares/blob/main/docs/releases.md).
 
 For Windows, prepare the installer and its matching signed manifest, attach the versioned installer, fixed-name copy and `latest.json` to `vX.Y.Z`, then publish it as the stable **Latest** release. Confirm that the manifest points to the intended package and advertises a newer version. Keep Android prereleases separate.
+
+The current source tools verify package versions, updater signatures and SHA-256 hashes before staging a delivery. The macOS script additionally requires Developer ID signing and notarization. The manifest merge tool accepts matching source revisions, dependency locks and release notes across architectures. See the source release guide for setup and pending native checks.
 
 A commit to the application source does not distribute an update. Users receive new packages only after the release artifacts are published. Private signing keys, passwords and GitHub credentials must remain outside this repository and release assets.
 
